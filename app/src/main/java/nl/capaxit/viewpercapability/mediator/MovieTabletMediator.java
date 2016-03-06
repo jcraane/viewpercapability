@@ -51,6 +51,7 @@ public class MovieTabletMediator extends FrameLayout implements MovieMediator {
     @Override
     public void init() {
         movieList.update(movieService.getMovies());
+        movieDetails.update(movieService.getMovies().get(0));
     }
 
     public void onEvent(final MovieSelectedEvent event) {
