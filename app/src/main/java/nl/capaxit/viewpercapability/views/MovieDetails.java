@@ -10,6 +10,8 @@ import nl.capaxit.viewpercapability.R;
 import nl.capaxit.viewpercapability.domain.Movie;
 
 /**
+ * Display the details of a movie.
+ *
  * Created by jamiecraane on 06/03/16.
  */
 public class MovieDetails extends FrameLayout {

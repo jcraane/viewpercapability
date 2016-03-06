@@ -7,6 +7,8 @@ import java.util.Random;
 import nl.capaxit.viewpercapability.domain.Movie;
 
 /**
+ * Just create some mock data.
+ *
  * Created by jamiecraane on 06/03/16.
  */
 public class MovieService {

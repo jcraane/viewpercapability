@@ -3,6 +3,8 @@ package nl.capaxit.viewpercapability.mediator.event;
 import nl.capaxit.viewpercapability.domain.Movie;
 
 /**
+ * Dispatched when a movie is selected in the MovieList.
+ *
  * Created by jamiecraane on 06/03/16.
  */
 public final class MovieSelectedEvent {

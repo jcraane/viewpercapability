@@ -18,6 +18,8 @@ import nl.capaxit.viewpercapability.domain.Movie;
 import nl.capaxit.viewpercapability.mediator.event.MovieSelectedEvent;
 
 /**
+ * A list of movies.
+ *
  * Created by jamiecraane on 06/03/16.
  */
 public class MovieList extends RecyclerView {
