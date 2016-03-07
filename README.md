@@ -20,7 +20,7 @@ A dependency injection framework is not used in this example but could be easily
 The top-level activity, in this case OverviewActivity loads a single view, the MovieMediator. The MovieMediator 
 is an interface with two implementations at the moment: MoviePhoneMediator and MovieTabletMediator.
 
-The MoviePhoneMediator defines the phone specific layout and the MovieTabletMediator defines the tablet specific layout.
+The MoviePhoneMediator defines the phone specific layout and behavior and the MovieTabletMediator defines the tablet specific layout and behavior.
  
 The mediator acts as a mediator between the various components that make up the view, it takes over 
 the responsibility from the activity. The purpose of the activity is to load the mediator view
@@ -28,12 +28,12 @@ and forward any life cycle methods it may need.
 
 The idea is to use a different composition of views for the phone and tablet layouts. Therefor it is important
 to structure the views in such a way so that it allows for easy composition. In the example application
-the views MovieList and MovieDetails are defined. MovieList just displays a list of movies and MovieDetails
+the views MovieList and MovieDetails views are defined. MovieList just displays a list of movies and MovieDetails
 displays the details of a single movie.
 
 ### MoviePhoneMediator
 
-Inflates the layout/mediator_overview defines only the MovieList view which is displayed as a single view
+The MoviePhoneMediator inflates the layout/mediator_overview defines only the MovieList view which is displayed as a single view
 with a list of movies on a phone. When the user taps on a movie, the MovieSelectedEvent is dispatched which
 is handled by the MoviePhoneMediator. The MoviePhoneMediator starts the DetailsActivity and passes the
 selected movie using an intent. The DetailsActivity then displays the details of the selected movie.
@@ -42,7 +42,7 @@ The DetailsActivity defines the MovieDetails view.
 
 ### MovieTabletMediator
 
-Inflates the layout-w670dp/mediator_overview defines both the MovieList and MovieDetails view with the 
+The MovieTabletMediator inflates the layout-w670dp/mediator_overview defines both the MovieList and MovieDetails view with the 
 MovieList on the left and the MovieDetails next to it. When a user taps on a movie, the MovieSelectedEvent
 is handled by the MovieTableMediator which updates the MovieDetails view.
 
