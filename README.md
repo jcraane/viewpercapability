@@ -14,3 +14,6 @@ You could also use data-binding, a seperate view model or any other mechanism th
 This application does use the EventBus but it could just as easily use regular listener interfaces.
 
 A depedency injection framework is not used in this example but could be easily added as well.
+
+## Implementation
+

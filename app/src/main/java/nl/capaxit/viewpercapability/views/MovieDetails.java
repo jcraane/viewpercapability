@@ -3,7 +3,7 @@ package nl.capaxit.viewpercapability.views;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import nl.capaxit.viewpercapability.R;
@@ -14,7 +14,7 @@ import nl.capaxit.viewpercapability.domain.Movie;
  *
  * Created by jamiecraane on 06/03/16.
  */
-public class MovieDetails extends FrameLayout {
+public class MovieDetails extends LinearLayout {
     private TextView title;
 
     public MovieDetails(final Context context) {
@@ -28,6 +28,7 @@ public class MovieDetails extends FrameLayout {
     }
 
     private void init(final Context context) {
+        setOrientation(VERTICAL);
         final View view = View.inflate(context, R.layout.movie_details, this);
         title = (TextView) view.findViewById(R.id.title);
     }
