@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -53,7 +54,7 @@ public class MovieList extends RecyclerView {
 
         @Override
         public MovieViewHolder onCreateViewHolder(final ViewGroup parent, final int viewType) {
-            final View view = View.inflate(parent.getContext(), R.layout.movie_row, null);
+            final View view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_row, parent, false);
             final MovieViewHolder holder = new MovieViewHolder(view);
             holder.title = (TextView) view.findViewById(R.id.movieTitle);
             return holder;
