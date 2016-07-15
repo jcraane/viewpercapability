@@ -57,4 +57,21 @@ Which component is responsbile for managing application state? This can be done 
 
 ### How do other components react to changes in child/parent components?
 
-TODO
+Obviously this can be done in a variety of different ways.
+
+## What about fragments?
+
+The view-per-capability pattern does not make use of fragments. Fragments, like activities, are life-cycle
+components. The mediator is called by the containing activity for any life-cycle events the mediator
+may be iterested in. For example, the onResume of the activity to register an EventBus. By following this
+pattern, the need for fragments is gone which reduces complexity.
+
+## Code style
+
+Code style is matter of preference. What I do find helpful is the following rule:
+
+Make sure all classes/components/views in your entire applicatie do not EXCEED 200 lines of code.
+
+This rule is created over time by writing al lot of code and finally settling on something
+simple that works. This way you have to thing about decomposing your application in re-usable
+components.
