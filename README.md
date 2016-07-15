@@ -57,7 +57,7 @@ Which component is responsbile for managing application state? This can be done 
 
 ### How do other components react to changes in child/parent components?
 
-Obviously this can be done in a variety of different ways.
+Obviously this can be done in a variety of different ways: TODO
 
 ## What about fragments?
 
