@@ -47,3 +47,14 @@ MovieList on the left and the MovieDetails next to it. When a user taps on a mov
 is handled by the MovieTableMediator which updates the MovieDetails view.
 
 When the tablet view starts for the first time, by default shows the details of the first movie in the list.
+
+## Application state
+
+Which component is responsbile for managing application state? This can be done in a variaty of ways. The pattern I prefer at the moment is to let top-level components manage state and pass this through to their child components. ReactJs also uses this principle. This has a couple of advantages:
+
+- It is clear where in the application state is managed. Only top-level components.
+- Child components are more re-usable because they do not have to concern about handling state.
+
+### How do other components react to changes in child/parent components?
+
+TODO
