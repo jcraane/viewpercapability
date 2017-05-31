@@ -8,7 +8,7 @@ import android.widget.FrameLayout;
 import de.greenrobot.event.EventBus;
 import nl.capaxit.viewpercapability.R;
 import nl.capaxit.viewpercapability.mediator.event.MovieSelectedEvent;
-import nl.capaxit.viewpercapability.service.MovieService;
+import nl.capaxit.viewpercapability.service.MockMovieRepository;
 import nl.capaxit.viewpercapability.views.MovieDetails;
 import nl.capaxit.viewpercapability.views.MovieList;
 
@@ -22,7 +22,7 @@ public class MovieTabletMediator extends FrameLayout implements MovieMediator {
     private MovieList movieList;
     private MovieDetails movieDetails;
 
-    private MovieService movieService = new MovieService();
+    private MockMovieRepository movieService = new MockMovieRepository();
 
     public MovieTabletMediator(final Context context) {
         super(context);
